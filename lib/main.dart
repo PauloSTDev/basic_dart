@@ -32,10 +32,16 @@ void main() {
           onPressed: () {},
         ),
         //Menu de navegação / Footer
-        bottomNavigationBar: Row(
-          children: <Widget>[
-            Expanded(child: Icon(Icons.home)),
-            Expanded(child: Icon(Icons.person)),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Account",
+            ),
           ],
         ),
       ),
