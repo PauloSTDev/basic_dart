@@ -10,36 +10,38 @@ void main() {
       debugShowCheckedModeBanner: false,
       //Tema do App
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.indigo,
       ),
       //Interface inicial do App
       home: Scaffold(
         appBar: AppBar(
-          title: Text("App Title"),
+          foregroundColor: Colors.black,
+          title: const Text("App Title", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
           //Ações do AppBar apresentando dois botões
-          actions: <Widget>[
-            Icon(Icons.search),
-            Icon(Icons.shopping_cart),
+          actions: const <Widget>[
+            Icon(Icons.search, color: Colors.black,),
+            Icon(Icons.shopping_cart, color: Colors.black,),
           ],
         ),
         //Menu de opções, no canto esquerdo do appbar
-        drawer: Drawer(),
+        drawer: const Drawer(),
         //Corpo do App, onde vamos colocar lista de textos por exemplo
         body: Home(),
         //Botão flutuante do lado direito da tela
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add, color: Colors.black,),
           onPressed: () {},
         ),
         //Menu de navegação / Footer
         bottomNavigationBar: BottomNavigationBar(
-          items: [
+          fixedColor: Colors.black,
+          items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
               label: "Home",
+              icon: Icon(Icons.home, color: Colors.black,),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.person, color: Colors.black,),
               label: "Account",
             ),
           ],
