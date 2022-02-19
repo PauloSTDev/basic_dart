@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
           ElevatedButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return About();
+                return About("From Home Screen to About Screen!");
               }));
             },
             child: const Text("Go to About Screen"),
